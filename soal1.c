@@ -1,4 +1,4 @@
-/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2025/2026
 *   Modul               : 2
 *   Hari dan Tanggal    : Senin, 20 April 2026
 *   Nama (NIM)          : Jeva Steve Sinaga (13224002)
@@ -40,6 +40,9 @@
             }
             if (kiri != -1 && kanan != -1) {
                 arr[i] = (kiri + kanan) / 2;
+                if (arr[i] < 0) {
+                    arr[i] += -1;
+                }
             }
             else if (kiri != -1) {
                 arr[i] = kiri;
