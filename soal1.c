@@ -1,5 +1,5 @@
 /** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
-*   Modul               : 1
+*   Modul               : 2
 *   Hari dan Tanggal    : Senin, 20 April 2026
 *   Nama (NIM)          : Jeva Steve Sinaga (13224002)
 *   Nama File           : soal1.c
@@ -52,9 +52,9 @@
             }
         }
     }
-    printf("RECOVERED ");
+    printf("RECOVERED");
     for (int i = 0 ; i < n ; i++) {
-        printf("%d ", arr[i]);
+        printf(" %d", arr[i]);
         x += arr[i];
     }
     printf("\nMAX_SUM %d", x);
