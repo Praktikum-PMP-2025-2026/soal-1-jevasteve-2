@@ -3,7 +3,8 @@
 *   Hari dan Tanggal    : Senin, 20 April 2026
 *   Nama (NIM)          : Jeva Steve Sinaga (13224002)
 *   Nama File           : soal1.c
-*   Deskripsi           :   1. Nilai hilang ditandai -1
+*   Deskripsi           :   Pulihkan elemen array yang hilang lalu cari jumlah subarray maksimum
+                            1. Nilai hilang ditandai -1
                             2. Untuk tiap -1:
                                 • cari tetangga valid terdekat di kiri dan kanan
                                 • jika dua-duanya ada, ganti dengan floor((kiri+kanan)/2)
@@ -14,6 +15,7 @@
  */
 
  #include <stdio.h>
+ #include <math.h>
 
  int main (){
     int n;
@@ -39,9 +41,11 @@
                 }
             }
             if (kiri != -1 && kanan != -1) {
-                arr[i] = (kiri + kanan) / 2;
-                if (arr[i] < 0) {
-                    arr[i] += -1;
+                if ((kiri + kanan) < 0 && (kiri + kanan) % 2 != 0) {
+                    arr[i] = ((kiri + kanan) / 2) - 1 ;
+                }
+                else {
+                    arr[i] = (kiri + kanan) / 2;
                 }
             }
             else if (kiri != -1) {
