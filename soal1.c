@@ -14,7 +14,6 @@
  */
 
  #include <stdio.h>
- #include <math.h>
 
  int main (){
     int n;
@@ -40,7 +39,7 @@
                 }
             }
             if (kiri != -1 && kanan != -1) {
-                arr[i] = (int)floor((kiri + kanan) / 2.0);
+                arr[i] = (kiri + kanan) / 2;
             }
             else if (kiri != -1) {
                 arr[i] = kiri;
