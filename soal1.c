@@ -27,13 +27,13 @@
         if (arr[i] == -1) {
             int kiri = -1, kanan = -1;
             for (int j = i - 1; j >= 0 ; j--){
-                if (arr[j] != -1) {
+                if (arr[j] <= -1) {
                     kiri = arr[j];
                     break;
                 }
             }
             for (int j = i ; j < n; j++){
-                if (arr[j] != -1) {
+                if (arr[j] <= -1) {
                     kanan = arr[j];
                     break;
                 }
