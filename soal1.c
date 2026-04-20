@@ -14,6 +14,7 @@
  */
 
  #include <stdio.h>
+ #include <math.h>
 
  int main (){
     int n;
@@ -28,24 +29,18 @@
             int kiri = -1, kanan = -1;
             for (int j = i - 1; j >= 0 ; j--){
                 if (arr[j] != -1) {
-                    if (arr[j] < -1){
-                        arr[j] = 0;
-                    }
                     kiri = arr[j];
                     break;
                 }
             }
             for (int j = i ; j < n; j++){
                 if (arr[j] != -1) {
-                    if (arr[j] < -1){
-                        arr[j] = 0;
-                    }
                     kanan = arr[j];
                     break;
                 }
             }
             if (kiri != -1 && kanan != -1) {
-                arr[i] = (kiri + kanan) / 2;
+                arr[i] = (int)floor((kiri + kanan) / 2.0);
             }
             else if (kiri != -1) {
                 arr[i] = kiri;
